@@ -1,0 +1,73 @@
+// Feature card
+.feature-card {
+  background: $bg-light;
+  padding: 2.5rem 2rem;
+  border-radius: 8px;
+  box-shadow: $shadow-soft;
+  transition: $transition-standard;
+
+  &:hover {
+    transform: translateY(-10px);
+    box-shadow: $shadow-medium;
+  }
+
+  i {
+    font-size: 2.5rem;
+    color: $primary-color;
+    margin-bottom: 1.5rem;
+  }
+
+  h4 {
+    font-family: $font-heading;
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: $text-dark;
+  }
+
+  p {
+    font-size: 1rem;
+    color: $text-light;
+    line-height: 1.6;
+  }
+}
+
+// Testimonial card (for future use)
+.testimonial-card {
+  background: $bg-light;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: $shadow-soft;
+  margin: 1rem;
+  position: relative;
+
+  .quote {
+    font-size: 1.2rem;
+    font-style: italic;
+    margin-bottom: 1.5rem;
+    color: $text-dark;
+  }
+
+  .author {
+    @include flex-center;
+
+    img {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      margin-right: 1rem;
+    }
+
+    .info {
+      .name {
+        font-weight: 600;
+        font-size: 1rem;
+      }
+
+      .title {
+        font-size: 0.85rem;
+        color: $text-light;
+      }
+    }
+  }
+}

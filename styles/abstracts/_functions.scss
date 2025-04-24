@@ -1,0 +1,14 @@
+// Function to convert px to rem
+@function rem($pixels, $context: 16) {
+  @return ($pixels / $context) * 1rem;
+}
+
+// Function to lighten color by percentage
+@function tint($color, $percentage) {
+  @return mix(white, $color, $percentage);
+}
+
+// Function to darken color by percentage
+@function shade($color, $percentage) {
+  @return mix(black, $color, $percentage);
+}

@@ -1,0 +1,131 @@
+.footer {
+  background-color: $secondary-color;
+  color: $text-white;
+  padding: 4rem 0 2rem 0;
+
+  &-container {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+
+    @include respond-to(tablet) {
+      grid-template-columns: 1fr;
+      gap: 3rem;
+    }
+  }
+
+  &-logo {
+    a {
+      color: $text-white;
+      font-family: $font-heading;
+      font-weight: 700;
+      font-size: 1.8rem;
+      text-decoration: none;
+      letter-spacing: 1px;
+    }
+
+    p {
+      margin-top: 1rem;
+      color: rgba($text-white, 0.8);
+      font-size: 0.95rem;
+      max-width: 250px;
+    }
+  }
+
+  &-links {
+    display: flex;
+    justify-content: space-between;
+
+    @include respond-to(mobile) {
+      flex-direction: column;
+      gap: 2rem;
+    }
+  }
+
+  &-link-wrapper {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+
+    @include respond-to(tablet) {
+      gap: 2rem;
+    }
+
+    @include respond-to(mobile) {
+      flex-direction: column;
+      gap: 2rem;
+    }
+  }
+
+  &-link-items {
+    display: flex;
+    flex-direction: column;
+    margin: 0 1rem;
+
+    h2 {
+      font-family: $font-heading;
+      font-size: 1.1rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+      color: $text-white;
+    }
+
+    a {
+      color: rgba($text-white, 0.8);
+      text-decoration: none;
+      margin-bottom: 0.8rem;
+      font-size: 0.9rem;
+      transition: $transition-standard;
+
+      &:hover {
+        color: $text-white;
+      }
+    }
+  }
+
+  .social-media {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 3rem;
+
+    &-wrap {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      max-width: 1200px;
+      padding: 0 24px;
+      border-top: 1px solid rgba($text-white, 0.2);
+      padding-top: 2rem;
+
+      @include respond-to(tablet) {
+        flex-direction: column;
+        gap: 1.5rem;
+      }
+    }
+
+    .website-rights {
+      font-size: 0.85rem;
+      color: rgba($text-white, 0.7);
+    }
+
+    .social-icons {
+      display: flex;
+      gap: 1rem;
+
+      .social-icon-link {
+        color: $text-white;
+        font-size: 1.2rem;
+        transition: $transition-standard;
+
+        &:hover {
+          color: $accent-color;
+          transform: translateY(-3px);
+        }
+      }
+    }
+  }
+}

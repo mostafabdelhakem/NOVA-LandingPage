@@ -1,0 +1,52 @@
+// Flexbox helpers
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+}
+
+@mixin flex-center-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@mixin flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+// Section padding
+@mixin section-padding {
+  padding: 4rem calc((100vw - 1200px) / 2);
+}
+
+// Button styles
+@mixin button-style {
+  font-size: 1rem;
+  padding: 12px 28px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  position: relative;
+  transition: $transition-standard;
+  outline: none;
+  font-weight: 500;
+  font-family: $font-body;
+}
+
+// Media queries
+@mixin respond-to($breakpoint) {
+  @if $breakpoint == mobile {
+    @media screen and (max-width: $mobile) {
+      @content;
+    }
+  } @else if $breakpoint == tablet {
+    @media screen and (max-width: $tablet) {
+      @content;
+    }
+  } @else if $breakpoint == desktop {
+    @media screen and (max-width: $desktop) {
+      @content;
+    }
+  }
+}
